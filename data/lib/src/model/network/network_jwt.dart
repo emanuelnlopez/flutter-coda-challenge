@@ -27,21 +27,31 @@ class NetworkJwt extends Jwt {
       );
 
       final expiresAt = DateTime.fromMillisecondsSinceEpoch(
-        payload['exp'] * 1000,
+        payload[_AttributesKeys.exp] * 1000,
       );
 
       final issuedAt = DateTime.fromMillisecondsSinceEpoch(
-        payload['iat'] * 1000,
+        payload[_AttributesKeys.iat] * 1000,
       );
 
       result = NetworkJwt(
         expiresAt: expiresAt,
         issuedAt: issuedAt,
         token: token,
-        userId: JsonClass.parseInt(payload['data']['id']),
-        userEmail: payload['data']['email'],
+        userId: JsonClass.parseInt(
+          payload[_AttributesKeys.data][_AttributesKeys.id],
+        ),
+        userEmail: payload[_AttributesKeys.data][_AttributesKeys.email],
       );
     }
     return result;
   }
+}
+
+class _AttributesKeys {
+  static const String data = 'data';
+  static const String email = 'email';
+  static const String exp = 'exp';
+  static const String iat = 'iat';
+  static const String id = 'id';
 }
