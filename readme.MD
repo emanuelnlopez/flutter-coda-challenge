@@ -11,11 +11,17 @@ Projecto realizado como code challenge para una posición como desarrollador Flu
 - En los diseños de Figma no se incluía una pantalla para el registro de un nuevo usuario, pero como se contaba con la API para esto, se agregó dicha funcionalidad.
 - En el menú contextual de cada cliente se agrego, además de la opción para editarlo, la opción para borrarlo.
 - En el diálogo para crear/editar cliente se agregó el campo de la dirección (`address`).
+- El tiempo que me tomó desarollar el proyecto fue alrededor de 12 horas.
 
 ## About the API
 - Algunos request al servidor funcionan si se envian los headers: `content-type` y `accept` mientras que otros funcionan al no enviarlos.
 - Por lo tanto, en `data/lib/src/repositories/network/model` se definieron clases para cada uno de los requests donde se agregan o no los headers descriptos previamente.
-- El `accessToken` no es requerido para los endpoints de ABM. Sin embargo se agregó toda la lógica necesaria para guardarlo, validar que este siga siendo válido en las siguientes ejecuciones y envío del mismo en cada request al servidor.
+- El `accessToken` no es requerido para los endpoints de ABM. Sin embargo se agregó toda la lógica necesaria para guardarlo, validar que este siga siendo válido (valida el campo `exp` del payload) en las siguientes ejecuciones y envío del mismo en cada request al servidor.
+- El endpoint getClient (`client/fetch/{clientId}`) no fue utilizado, por lo tanto fue removido de la implementación.
+
+
+## Releases
+- El apk instalable se puede descargar desde la sección [Releases](https://github.com/emanuelnlopez/flutter-coda-challenge/releases)
 
 ## Screenshots
 
