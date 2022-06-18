@@ -25,7 +25,6 @@ class _ClientFormState extends State<ClientForm> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     _addressController = TextEditingController(
