@@ -23,6 +23,11 @@ Projecto realizado como code challenge para una posición como desarrollador Flu
 ## Releases
 - El apk instalable se puede descargar desde la sección [Releases](https://github.com/emanuelnlopez/flutter-coda-challenge/releases)
 
+## Suggested improvements
+- La app podría solicitar la siguiente tanda de clientes a medida que se va haciendo scroll por la lista
+- la API podría proveer una forma de limitar la cantidad de clientes que se desean obtener en cada request (en lugar de que esté fijo en 50)
+- Al crear un usuario, se podría devolver un JWT para utilizarlo de inmediato
+
 ## Screenshots
 
 Login Screen | Registration Screen
