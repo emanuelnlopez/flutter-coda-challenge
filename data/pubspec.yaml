@@ -1,6 +1,7 @@
 name: data
 description: Data layer of the clients CRUD app.
 version: 0.0.1
+publish_to: none
 homepage:
 
 environment:
@@ -10,6 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  domain:
+    path: ../domain
+  http: ^0.13.4
+  json_class: ^2.1.2+5
+  flutter_secure_storage: ^5.0.2
+  logging: ^1.0.2
 
 dev_dependencies:
   flutter_test:
