@@ -37,12 +37,6 @@ class ClientNetworkRepository implements ClientRepository {
   }
 
   @override
-  Future<Client> getClient(int clientId) {
-    // TODO: implement getClient
-    throw UnimplementedError();
-  }
-
-  @override
   Future<ClientList> listClients({int? page}) async {
     final response = await _networkClient.post(
       ClientListRequest(

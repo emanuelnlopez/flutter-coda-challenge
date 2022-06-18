@@ -8,7 +8,6 @@ export 'src/model/user.dart';
 export 'src/repositories/client_repository.dart';
 export 'src/repositories/user_repository.dart';
 export 'src/use_cases/client/delete_client_use_case.dart';
-export 'src/use_cases/client/get_client_use_case.dart';
 export 'src/use_cases/client/list_clients_use_case.dart';
 export 'src/use_cases/client/save_client_use_case.dart';
 export 'src/use_cases/jwt/get_jwt_use_case.dart';
