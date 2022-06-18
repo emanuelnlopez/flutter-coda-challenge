@@ -1,4 +1,5 @@
 import 'package:crud/src/ui/ui.dart';
+import 'package:crud/src/util/util.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 
@@ -130,13 +131,9 @@ class _ClientFormState extends State<ClientForm> {
                 ),
                 labelText: 'Email address*',
               ),
-              validator: (value) {
-                String? result;
-                if (value?.isNotEmpty != true) {
-                  result = 'Required value';
-                }
-                return result;
-              },
+              validator: (value) => Validator.validateEmail(
+                value,
+              ),
             ),
             const SizedBox(
               height: Spacing.small,
